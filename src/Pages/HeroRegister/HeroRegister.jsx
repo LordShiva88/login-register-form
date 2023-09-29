@@ -8,6 +8,7 @@ import auth from "../../Firebase/firebase.config";
 import { useState } from "react";
 
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HeroRegister = () => {
   const [errorMassage, setErrorMassage] = useState("");
@@ -180,13 +181,13 @@ const HeroRegister = () => {
             </div>
             <p className="text-xs text-center sm:px-6 dark:text-gray-400">
               Do not have an account?
-              <a
+              <Link to={'/login'}
                 rel="noopener noreferrer"
                 href="#"
                 className="underline dark:text-gray-100"
               >
                 Sign up
-              </a>
+              </Link>
             </p>
           </form>
           <div>
